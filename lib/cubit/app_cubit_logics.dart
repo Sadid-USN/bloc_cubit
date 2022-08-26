@@ -1,6 +1,6 @@
 import 'package:bloc_qubit_test/cubit/cubit_state.dart';
 import 'package:bloc_qubit_test/cubit/emit_cubits.dart';
-import 'package:bloc_qubit_test/cubit/home_page.dart';
+import 'package:bloc_qubit_test/stream/stream_adn_future.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +16,7 @@ class _AppCubitLogicsState extends State<AppCubitLogics> {
     return Scaffold(body: BlocBuilder<AppCubit, CubitState>(
       builder: (context, state) {
         if (state is HomeState) {
-          return const HomePage();
+          return const FutureAndStreamBuilder();
         } else {
           return const SizedBox();
         }
